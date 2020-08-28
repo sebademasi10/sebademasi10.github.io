@@ -1,113 +1,136 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <title>Pymes 2020</title>
-  </head>
-  <body>
-    
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-        <ul class="navbar-nav">
-            <li><a class="nav-link" href="./index.html"> Inicio </a></li>
-            <li><a class="nav-link" href="./articulos.html"> Artículos </a></li>
-            <li><a class="nav-link" href="./articuloFamilias.html"> Artículos familias</a></li>
-        </ul>
-      </nav>
-    
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./articulos.html">Artículos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./articuloFamilias.html">Artículos familias</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
     <h2>Artículos (Listado)</h2>
 
-    <div style="margin:4em"  class="container jumbotron">
-    <form action="" id="filtro">
-        <label for="NombreBuscar">Nombre: </label>
-        <input type="text" name="NombreBuscar" id="NombreBuscar" placeholder="Ingrese su nombre"> 
-        <label for="Activo">Activo: </label>
-        <select name="Activo" id="Activo">
-            <option value=""></option>
-            <option value="true">Sí</option>
-            <option value="false">No</option>
-        </select>
+    <div style="margin:4em" class="container jumbotron">
+        <form action="" id="filtro">
+            <label for="NombreBuscar">Nombre: </label>
+            <input type="text" name="NombreBuscar" id="NombreBuscar" placeholder="Ingrese su nombre">
+            <label for="Activo">Activo: </label>
+            <select name="Activo" id="Activo">
+                <option value=""></option>
+                <option value="true">Sí</option>
+                <option value="false">No</option>
+            </select>
+            <br>
+            <input class="btn btn-info" type="button" name="buscar" id="buscar" value="Buscar">
+            <input class="btn btn-info" type="button" name="agregar" id="agregar" value="Agregar"
+                onclick="window.alert('Todavía no sé hacer ni bosta')">
+        </form>
+
         <br>
-        <input class="btn btn-info" type="button" name="buscar" id="buscar" value="Buscar">
-        <input class="btn btn-info" type="button" name="agregar" id="agregar" value="Agregar" onclick="window.alert('Todavía no sé hacer ni bosta')">
-    </form>
-    
-    <br>
 
-    <table class="table table-striped">
-        <tr>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Stock</th>
-            <th>Acciones</th>
-        </tr>
-        <tr>
-            <td>ADAPTADOR USB WIFI TL-WN722N</td>
-            <td id="precioAdaptador">$219.00</td>
-            <td>544</td>
-            <td>
-                <input class="btn btn-info" type="button" name="Ver" id="Ver" value="V">
-                <input class="btn btn-secondary" type="button" name="Mod" id="Mod" value="M">
-                <input class="btn btn-danger" type="button" name="Borrar" id="Borrar" value="B">
-            </td>
-        </tr>
-        <tr>
-            <td>Toca disco winco</td>
-            <td>$433</td>
-            <td>344</td>
-            <td>
-                <input class="btn btn-info" type="button" name="Ver" id="Ver" value="V">
-                <input class="btn btn-secondary" type="button" name="Mod" id="Mod" value="M">
-                <input class="btn btn-danger" type="button" name="Borrar" id="Borrar" value="B">
-            </td>
-        </tr>
-        
-    </table>
+        <table class="table table-striped">
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Acciones</th>
+            </tr>
+            <tr>
+                <td>ADAPTADOR USB WIFI TL-WN722N</td>
+                <td id="precioAdaptador">$219.00</td>
+                <td>544</td>
+                <td>
+                    <input class="btn btn-info" type="button" name="Ver" id="Ver" value="V">
+                    <input class="btn btn-secondary" type="button" name="Mod" id="Mod" value="M">
+                    <input class="btn btn-danger" type="button" name="Borrar" id="Borrar" value="B">
+                </td>
+            </tr>
+            <tr>
+                <td>Toca disco winco</td>
+                <td>$433</td>
+                <td>344</td>
+                <td>
+                    <input class="btn btn-info" type="button" name="Ver" id="Ver" value="V">
+                    <input class="btn btn-secondary" type="button" name="Mod" id="Mod" value="M">
+                    <input class="btn btn-danger" type="button" name="Borrar" id="Borrar" value="B">
+                </td>
+            </tr>
 
-    <br><br>
+        </table>
 
-    <form action="" id="formReg">
-    <table>
-        <tr>
-            <td>Nombre:</td>
-            <td><input type="text" name="Nom" id="Nom"></td>
-        </tr>
-        <tr>
-            <td>Precio:</td>
-            <td><input type="text" name="Prec" id="Prec"></td>
-        </tr>
-        <tr>
-            <td>Artículos familias</td>
-            <td>
-                <select name="artFam" id="artFam">
-                    <option value=""></option>
-                    <option value="1">Accesorios</option>
-                    <option value="2">Audio</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-        </tr>
-        <tr>
-            <td><input class="btn btn-success" type="button" name="grabar" id="grabar" value="Grabar"></td>
-            <td><input class="btn btn-dark" type="button" name="cancelar" id="cancelar" value="Cancelar"></td>
-        </tr>
-    </table>
-    </form>
+        <br><br>
+
+        <form action="" id="formReg">
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" name="Nom" id="Nom"></td>
+                </tr>
+                <tr>
+                    <td>Precio:</td>
+                    <td><input type="text" name="Prec" id="Prec"></td>
+                </tr>
+                <tr>
+                    <td>Artículos familias</td>
+                    <td>
+                        <select name="artFam" id="artFam">
+                            <option value=""></option>
+                            <option value="1">Accesorios</option>
+                            <option value="2">Audio</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input class="btn btn-success" type="button" name="grabar" id="grabar" value="Grabar"></td>
+                    <td><input class="btn btn-dark" type="button" name="cancelar" id="cancelar" value="Cancelar"></td>
+                </tr>
+            </table>
+        </form>
     </div>
-    
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 
-  </body>
+</body>
+
 </html>
