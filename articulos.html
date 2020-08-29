@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 
     <title>Pymes 2020</title>
 </head>
@@ -35,26 +36,27 @@
     </nav>
 
 
-    <h2>Artículos (Listado)</h2>
-    <main role="main" class="container">
-    <div class="jumbotron">
-        <form action="" id="filtro">
-            <label for="NombreBuscar">Nombre: </label>
-            <input type="text" name="NombreBuscar" id="NombreBuscar" placeholder="Ingrese su nombre">
-            <label for="Activo">Activo: </label>
-            <select name="Activo" id="Activo">
-                <option value=""></option>
-                <option value="true">Sí</option>
-                <option value="false">No</option>
-            </select>
-            <br>
-            <input class="btn btn-info" type="button" name="buscar" id="buscar" value="Buscar">
-            <input class="btn btn-info" type="button" name="agregar" id="agregar" value="Agregar"
-                onclick="window.alert('Todavía no sé hacer ni bosta')">
-        </form>
 
-        <br>
-        
+    <main role="main" class="container">
+        <div class="jumbotron">
+            <h2>Artículos (Listado)</h2>
+            <form action="" id="filtro">
+                <label for="NombreBuscar">Nombre: </label>
+                <input type="text" name="NombreBuscar" id="NombreBuscar" placeholder="Ingrese su nombre">
+                <label for="Activo">Activo: </label>
+                <select name="Activo" id="Activo">
+                    <option value=""></option>
+                    <option value="true">Sí</option>
+                    <option value="false">No</option>
+                </select>
+                <br>
+                <input class="btn btn-info" type="button" name="buscar" id="buscar" value="Buscar">
+                <input class="btn btn-info" type="button" name="agregar" id="agregar" value="Agregar"
+                    onclick="window.alert('Todavía no sé hacer ni bosta')">
+            </form>
+
+            <br>
+
             <table class="table table-striped">
                 <tr>
                     <th>Nombre</th>
@@ -84,40 +86,40 @@
                 </tr>
 
             </table>
-        
-        <br><br>
 
-        <form action="" id="formReg">
-            <table>
-                <tr>
-                    <td>Nombre:</td>
-                    <td><input type="text" name="Nom" id="Nom"></td>
-                </tr>
-                <tr>
-                    <td>Precio:</td>
-                    <td><input type="text" name="Prec" id="Prec"></td>
-                </tr>
-                <tr>
-                    <td>Artículos familias</td>
-                    <td>
-                        <select name="artFam" id="artFam">
-                            <option value=""></option>
-                            <option value="1">Accesorios</option>
-                            <option value="2">Audio</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><input class="btn btn-success" type="button" name="grabar" id="grabar" value="Grabar"></td>
-                    <td><input class="btn btn-dark" type="button" name="cancelar" id="cancelar" value="Cancelar">
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
+            <br><br>
+
+            <form action="" id="formReg">
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td><input type="text" name="Nom" id="Nom"></td>
+                    </tr>
+                    <tr>
+                        <td>Precio:</td>
+                        <td><input type="text" name="Prec" id="Prec"></td>
+                    </tr>
+                    <tr>
+                        <td>Artículos familias</td>
+                        <td>
+                            <select name="artFam" id="artFam">
+                                <option value=""></option>
+                                <option value="1">Accesorios</option>
+                                <option value="2">Audio</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn btn-success" type="button" name="grabar" id="grabar" value="Grabar"></td>
+                        <td><input class="btn btn-dark" type="button" name="cancelar" id="cancelar" value="Cancelar">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </main>
 
 
