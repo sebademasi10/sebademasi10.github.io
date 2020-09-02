@@ -9,28 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-  <style>
-    body {
-      min-height: 75rem;
-      padding-top: 4.5rem;
-    }
-
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 
   <title>Pymes 2020</title>
 </head>
@@ -77,6 +56,29 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    //para el correcto funcionamiento de system.js en IE11
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ");
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) document.write(
+      '<script src=https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js><\/scr' + 'ipt>');
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.19/system.js"
+    integrity="sha256-HCJlhCZ21EKx0Wo6wCF+rbeBHlVlOSJccd4zTQe2TNw=" crossorigin="anonymous"></script>
+  <script>
+    // Instruct SystemJS to add the js extension to the module name to compute the final file name
+    SystemJS.config({
+      packages: {
+        './': {
+          defaultExtension: 'js'
+        }
+      }
+    });
+
+    // Load the main module
+    SystemJS.import("js/holamundo");
+  </script>
 </body>
 
 </html>
